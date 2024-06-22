@@ -3,13 +3,13 @@
 --
 
 -- create database and user, grant privileges to user
-create database web_database_project;
-create user 'mysql_username'@'localhost' identified by 'mysql_password';
-grant all on web_database_project.* to 'mysql_username'@'localhost';
+create database ${MYSQL_DATABASE};
+create user '${MYSQL_USER}'@'%' identified by '${MYSQL_PASSWORD}';
+grant all on ${MYSQL_DATABASE}.* to '${MYSQL_USER}'@'%';
 flush privileges;
 
 -- select the database and create tables
-use web_database_project;
+use ${MYSQL_DATABASE};
 create table book(
     id int not null auto_increment primary key,
     title varchar(255) not null
