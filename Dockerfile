@@ -1,11 +1,19 @@
-FROM python:3.10-slim
+FROM python:3.8-slim
+
+RUN mkdir /app
 
 WORKDIR /app
 
-COPY requirements.txt requirements.txt
+EXPOSE 5000:5000
 
-RUN pip3 install -r requirements.txt
+COPY ./requirements.txt /tmp/requirements.txt
+
+## Pip dependencies
+# Upgrade pip
+RUN pip3 install --upgrade pip
+RUN pip3 install -r /tmp/requirements.txt
 
 COPY . .
 
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000" ]
+# CMD ["gunicorn", "--bind", "0.0.0.0:5000", "/app.run.py:app"]
+# CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000" ]
