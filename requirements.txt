@@ -6,3 +6,4 @@ MarkupSafe
 mysql-connector
 Werkzeug
 gunicorn
+python-dotenv

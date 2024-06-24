@@ -2,17 +2,28 @@ import configparser
 from flask import Flask, render_template, request
 import mysql.connector
 from collections.abc import Container
+from dotenv import load_dotenv
+import os
 
 # Read configuration from file.
+load_dotenv()
 config = configparser.ConfigParser()
 config.read('config.ini')
+
+con = {
+    'host' : 'db',
+    'user' : os.environ.get('MYSQL_USER'),
+    'passwd' : os.environ.get('MYSQL_PASSWORD'),
+    'database' : os.environ.get('MYSQL_DATABASE')
+}
+
 
 # Set up application server.
 app = Flask(__name__)
 
 # Create a function for fetching data from the database.
 def sql_query(sql):
-    db = mysql.connector.connect(**config['mysql.connector'])
+    db = mysql.connector.connect(**con)
     cursor = db.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
@@ -22,7 +33,7 @@ def sql_query(sql):
 
 
 def sql_execute(sql):
-    db = mysql.connector.connect(**config['mysql.connector'])
+    db = mysql.connector.connect(**con)
     cursor = db.cursor()
     cursor.execute(sql)
     db.commit()
