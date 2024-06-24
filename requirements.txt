@@ -1,8 +1,8 @@
-Click==7.0
-Flask==1.0.2
-itsdangerous==1.1.0
-Jinja2==2.10
-# MarkupSafe==1.0
-mysql-connector==2.2.9
-Werkzeug==0.14.1
-gunicorn==22.0.0
+Click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+mysql-connector
+Werkzeug
+gunicorn

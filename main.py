@@ -1,6 +1,7 @@
 import configparser
 from flask import Flask, render_template, request
 import mysql.connector
+from collections.abc import Container
 
 # Read configuration from file.
 config = configparser.ConfigParser()
@@ -53,4 +54,5 @@ def template_response_with_data():
     return render_template('home-w-data.html', template_data=template_data)
 
 if __name__ == '__main__':
-    app.run(**config['app'])
+    app.run(host='0.0.0.0', port=5000)
+#**config['app']
