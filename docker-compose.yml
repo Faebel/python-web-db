@@ -11,6 +11,9 @@ services:
       - "5000:5000"
     environment:
       - DATABASE_URL=${DATABASE_URL} 
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
     depends_on:
       - db
   
@@ -23,6 +26,8 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
   
   tool:
     image: phpmyadmin
