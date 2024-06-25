@@ -1,0 +1,13 @@
+# Description: Template for .env file
+# Usage: Copy this file to .env and fill in the values
+# Note: Do not commit .env file to git
+
+# name of the database in MySQL (no need to change this)
+MYSQL_DATABASE=web_database_project
+
+# MySQL root password
+MYSQL_ROOT_PASSWORD=<example_root_password>
+
+# MySQL user and password
+MYSQL_USER=<example_user>
+MYSQL_PASSWORD=<example_password>

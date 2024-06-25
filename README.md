@@ -1,10 +1,10 @@
 # python-web-db
-Example web application with database.  Python 3, MySQL.
+Example web application with database. Python 3, MySQL and PHPMyadmin as a tool for easy access to the database. <br>
+<br>
+It can also be started in a Docker devcontaier for easy developement in a complete environnement with all dependencies automatically installed.
 
 # Setup
-```
-virtualenv -p `which python3` venv
-source venv/bin/activate
-pip install flask
-pip install mysql-connector
-```
+The repository for this Project can easily be opened in a DevContaier or Codespace via the buttons below.<br>
+Further instructions in [the documentation for the DevContainer](.devcontainer/DevContainer_README.md). <br>
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://github.com/Faebel/python-web-db) <br>
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&repo=Faebel/python-web-db&ref=main&devcontainer_path=.devcontainer%2Fdevcontainer.json)

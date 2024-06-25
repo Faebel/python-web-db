@@ -2,14 +2,13 @@
 -- Example setup file for a web database project.
 --
 
--- create database and user, grant privileges to user
-create database ${MYSQL_DATABASE} if not exists;
-create user '${MYSQL_USER}'@'%' identified by '${MYSQL_PASSWORD}' if not exists;
-grant all on ${MYSQL_DATABASE}.* to '${MYSQL_USER}'@'%';
+-- create user and grant privileges to user
+create user '<example_user>'@'%' identified by '<example_password>';
+grant all on web_database_project.* to '<example_user>'@'%';
 flush privileges;
 
 -- select the database and create tables
-use ${MYSQL_DATABASE};
+use web_database_project;
 create table book(
     id int not null auto_increment primary key,
     title varchar(255) not null
