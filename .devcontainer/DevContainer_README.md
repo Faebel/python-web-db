@@ -1,7 +1,7 @@
 # Documentation Devcontainer
 ## Setup
 The repository for this Project can easily be opened in a DevContaier via the buttons below.<br>
-[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://github.com/Faebel/python-web-db) <br>
+[![Open in VS Code](https://img.shields.io/badge/Open%20in-VS%20Code-blue?logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/Faebel/python-web-db) <br>
 
 When started, the web application automatically starts, as a health-check, to indicate, that the app works. <br>
 
